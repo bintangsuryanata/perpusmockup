@@ -221,6 +221,17 @@ nav .icons .hamburger.close {
   transition: all 0.3s;
 }
 
+nav .clock {
+    position: absolute;
+    width: 150px;
+    height: 31.5px;
+    top: 53%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+  }
+
 /* HEADER */
 .header {
   background-color: var(--color-gray-100);
@@ -948,6 +959,16 @@ footer .copyright p {
     bottom: -30px;
     transform: translateX(-50%);
   }
+  nav .clock{
+    position: absolute;
+    width: 200px;
+    height: 32px;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 800px) {
@@ -1117,4 +1138,14 @@ footer .copyright p {
     bottom: -30px;
     transform: translateX(-50%);
   }
+  nav .clock {
+  position: absolute;
+  width: 75px;
+  height: 16px;
+  top: 43%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+ }
 }
