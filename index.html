@@ -69,6 +69,11 @@
             <i class="fi fi-rr-menu-burger hamburger open"></i>
             <i class="fi fi-rr-cross hamburger close"></i>
           </div>
+          <div class="clock">
+            <div id="hour">00</div>
+            <div id="minute">00</div>
+            <div id="second">00</div>
+         </div>
         </nav>
       </div>
     </div>
@@ -584,6 +589,33 @@
     
     <!-- CUSTOM JS FOR CUSTOM CURSOR -->
     <script>
+      var hour = document.getElementById("hour");
+var minute = document.getElementById("minute");
+var seconds = document.getElementById("second");
+
+var clock = setInterval(clockTime, 1000);
+
+function clockTime(){
+    var timeNow = new Date();
+    var hr = timeNow.getHours();
+    var min = timeNow.getMinutes();
+    var sec = timeNow.getSeconds();
+
+    if(hr<10){
+        hr="0"+hr;
+    }
+    if(min<10){
+        min="0"+min;
+    }
+    if(sec<10){
+        sec="0"+sec;
+    }
+
+    hour.textContent = hr;
+    minute.textContent = min;
+    seconds.textContent = sec;
+} 
+      
      new kursor({
             type: 1,
             removeDefaultCursor: true,
